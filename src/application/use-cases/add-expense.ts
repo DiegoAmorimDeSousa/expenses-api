@@ -6,6 +6,7 @@ export interface AddExpenseParams {
     category: string;
     value: number;
     date: string;
+    user: string;
 }
 
 export class AddExpenseUseCase {
@@ -19,8 +20,9 @@ export class AddExpenseUseCase {
         const expense: Expense = {
             description: params.description,
             category: params.category,
-            value: params.value,
-            date: params.date
+            cost: params.value,
+            date: params.date,
+            user: params.user,
         };
 
         await this.googleSheetsGateway.sendExpense(expense);

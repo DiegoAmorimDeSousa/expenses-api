@@ -1,8 +1,11 @@
 {
   "name": "expenses-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/main/server.js", 
   "scripts": {
+    "build": "npx tsc", 
+    "start": "node dist/main/server.js", 
+    "dev": "ts-node-dev src/main/server.ts", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

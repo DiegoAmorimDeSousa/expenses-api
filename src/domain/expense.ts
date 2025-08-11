@@ -4,4 +4,5 @@ export interface Expense {
     cost: number;
     date: string; 
     user: string;
+    type: string;
 }

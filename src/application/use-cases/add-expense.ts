@@ -23,6 +23,7 @@ export class AddExpenseUseCase {
             cost: params.value,
             date: params.date,
             user: params.user,
+            type: "Saída",
         };
 
         await this.googleSheetsGateway.sendExpense(expense);

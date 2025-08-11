@@ -6,13 +6,13 @@ export class ExpenseController {
 
     async add(req: Request, res: Response): Promise<Response> {
         try {
-            const { description, category, value, date } = req.body;
+            const { description, category, cost, date } = req.body;
 
-            if (!description || !category || typeof value !== 'number' || value <= 0 || !date) {
+            if (!description || !category || typeof cost !== 'number' || cost <= 0 || !date) {
                 return res.status(400).json({ error: 'Dados de gasto inválidos: descrição, categoria, valor ou data ausentes/inválidos.' });
             }
 
-            await this.addExpenseUseCase.execute({ description, category, value, date });
+            await this.addExpenseUseCase.execute({ description, category, cost, date });
 
             return res.status(201).json({ message: 'Gasto registrado com sucesso.' });
         } catch (error: any) {

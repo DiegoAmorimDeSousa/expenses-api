@@ -6,8 +6,8 @@ export interface AddExpenseParams {
     category: string;
     cost: number;
     date: string;
-    user: string;
-    type: string;
+    user?: string;
+    type?: string;
 }
 
 export class AddExpenseUseCase {
@@ -23,7 +23,7 @@ export class AddExpenseUseCase {
             category: params.category,
             cost: params.cost,
             date: params.date,
-            user: params.user,
+            user: params.user || 'Fulano',
             type: "Saída",
         };
 

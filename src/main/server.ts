@@ -1,5 +1,6 @@
 import { app } from './config/app';
 import axios from 'axios';
+import 'dotenv/config';
 
 const PORT = process.env.PORT || 3000;
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;

@@ -1,11 +1,11 @@
 {
   "name": "expenses-api",
   "version": "1.0.0",
-  "main": "dist/main/server.js", 
+  "main": "dist/main/server.js",
   "scripts": {
-    "build": "npx tsc", 
-    "start": "node dist/main/server.js", 
-    "dev": "ts-node-dev src/main/server.ts", 
+    "build": "npx tsc",
+    "start": "node dist/main/server.js",
+    "dev": "ts-node-dev src/main/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "axios": "^1.11.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
